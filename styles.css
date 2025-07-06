@@ -1,0 +1,113 @@
+/* ====== GLOBAL STYLES ====== */
+body {
+    scroll-behavior: smooth;
+}
+
+/* ====== TYPOGRAPHY ====== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Cooper Black", serif;
+    font-weight: 800;
+}
+p,
+a,
+li,
+span {
+    font-family: "Quicksand", sans-serif;
+}
+
+html.page-about section.card-section:hover,
+html.page-about section.card-section:active {
+    background-color: #b7ccf9;
+}
+
+html.page-thankyou section.card-section:hover,
+html.page-thankyou section.card-section:active {
+    background-color: #d2f3ef;
+}
+
+section.card-section {
+    background-color: white;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease,
+        transform 0.3s ease;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+/* ====== MENU LINK DEDENT TILE EFFECT ====== */
+nav ul li a {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 0.25rem;
+    display: inline-block;
+    padding: 0.5rem 0.75rem;
+    text-decoration: none !important;
+}
+nav ul li a:hover,
+nav ul li a:focus {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* ====== NAVBAR BRAND TEXT ====== */
+nav .font-cooper {
+    text-decoration: none !important;
+}
+
+/* ====== MOBILE MENU ANIMATION ====== */
+
+#menu-toggle.open .hamburger-bar:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+}
+#menu-toggle.open .hamburger-bar:nth-child(2) {
+    opacity: 0;
+}
+#menu-toggle.open .hamburger-bar:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+}
+
+/* ====== TEXT ALIGNMENT FIX ====== */
+.card-section .max-w-prose {
+    margin-left: 0; /* align body text with header */
+}
+
+/* ====== HEADER ANIMATION ====== */
+header h1 {
+    animation: fadeInSlideUp 0.6s ease-in-out both;
+}
+@keyframes fadeInSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes float-slow {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+.animate-float-slow {
+    animation: float-slow 6s ease-in-out infinite;
+}
+
+@keyframes spin-slow {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.animate-spin-slow {
+    animation: spin-slow 8s linear infinite;
+}
